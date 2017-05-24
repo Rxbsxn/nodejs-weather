@@ -1,13 +1,8 @@
-require('dotenv').config()
-
 const express = require('express')
-const app = express()
-const weather = require("openweather-node")
+const weather = require('./lib/weather')
 const upperCase = require('./lib/upperCase')
+const app = express()
 
-weather.setAPPID(process.env.API_KEY)
-weather.setCulture(process.env.LOCAL)
-weather.setForecastType(process.env.TYPE)
 
 const port = 3000
 
